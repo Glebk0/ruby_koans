@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Triangle Project Code.
 
 # Triangle analyzes the lengths of the sides of a triangle
@@ -17,7 +19,8 @@ def triangle(a, b, c)
   # WRITE THIS CODE
   #--
   a, b, c = [a, b, c].sort
-  fail TriangleError if (a+b) <= c
+  raise TriangleError if (a + b) <= c
+
   sides = [a, b, c].uniq
   [nil, :equilateral, :isosceles, :scalene][sides.size]
   #++

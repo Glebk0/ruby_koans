@@ -1,18 +1,19 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
+
 # -*- ruby -*-
 
 require File.expand_path(File.dirname(__FILE__) + '/neo')
 
 class AboutAsserts < Neo::Koan
-
   # We shall contemplate truth by testing reality, via asserts.
   def test_assert_truth
     #--
-    assert true                 # This should be true
+    assert true # This should be true
     if false
-    #++
-    assert false                # This should be true
-    #--
+      #++
+      assert false # This should be true
+      #--
     end
     #++
   end
@@ -21,11 +22,11 @@ class AboutAsserts < Neo::Koan
   # messages.
   def test_assert_with_message
     #--
-    assert true, "This should be true -- Please fix this"
+    assert true, 'This should be true -- Please fix this'
     if false
-    #++
-    assert false, "This should be true -- Please fix this"
-    #--
+      #++
+      assert false, 'This should be true -- Please fix this'
+      #--
     end
     #++
   end
